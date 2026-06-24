@@ -35,13 +35,14 @@ export default function RootLayout({
       className={cn("h-full", "antialiased",
         geistSans.variable, geistMono.variable,
         "font-sans", inter.variable)}
+      suppressHydrationWarning
     >
       <body className=
         "min-h-full flex flex-col"
       >
         <ThemeProvider attribute="class"
           defaultTheme="dark"
-        // enableSystem 
+          enableSystem
         >
           {children}
         </ThemeProvider>

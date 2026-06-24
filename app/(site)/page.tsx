@@ -1,4 +1,5 @@
 import TitleSection from "@/components/landing-page/title-section";
+import { Button } from "@/components/ui/button";
 
 function HomePage() {
     // const classes = " overflow-hidden
@@ -24,6 +25,24 @@ function HomePage() {
     md:items-center">
                 <TitleSection pill="✨ Your Workspace, Perfected"
                     title="All-In-One Collaboration and Productivity platform" />
+                <div className="bg-white
+                    p-\[2px]
+                    mt-6
+                    rounded-xl
+                    bg-linear-to-r
+                    from-primary
+                    to-brand-primaryBlue
+                    sm:w-\[300px]">
+                    <Button
+                        variant="default"
+                        className=" w-full
+                    rounded-[10px]
+                    p-6
+                    text-2xl
+                    bg-background">
+                        Get Cypress Free
+                    </Button>
+                </div>
             </div>
         </section>
     );
