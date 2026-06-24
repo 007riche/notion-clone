@@ -1,6 +1,6 @@
-function HomePageLayout() {
+function HomePageLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div>Home Page Layout</div>
+        <main>{children}</main>
     );
 }
 

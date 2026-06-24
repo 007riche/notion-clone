@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import db from "@/lib/supabase/db";
-import { log } from "console";
+// import db from "@/lib/supabase/db";
+// import { log } from "console";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/lib/providers/next-theme-providers";
 
@@ -28,16 +28,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(db);
+  // console.log(db);
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
+      className={cn("h-full", "antialiased",
+        geistSans.variable, geistMono.variable,
+        "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col">
+      <body className=
+        "min-h-full flex flex-col"
+      >
         <ThemeProvider attribute="class"
           defaultTheme="dark"
-          enableSystem >
+        // enableSystem 
+        >
           {children}
         </ThemeProvider>
       </body>
