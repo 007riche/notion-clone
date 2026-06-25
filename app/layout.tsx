@@ -40,7 +40,8 @@ export default function RootLayout({
       <body className=
         "min-h-full flex flex-col"
       >
-        <ThemeProvider attribute="class"
+        <ThemeProvider
+          attribute="class"
           defaultTheme="dark"
           enableSystem
         >

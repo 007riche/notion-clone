@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 html,
 body {
@@ -73,6 +73,11 @@ body {
   --border: oklch(0.928 0.006 264.5);
   --input: oklch(0.928 0.006 264.5);
   --ring: oklch(0.541 0.247 293.0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
   --radius: 0.5rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -119,7 +124,7 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
@@ -131,4 +136,34 @@ body {
   html {
     @apply font-sans;
   }
+} */
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+.animate-slide {
+  animation: 7s slide ease-in-out infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-1%);
+  }
+
+  to {
+    transform: translateX(-101%);
+  }
+
 }
