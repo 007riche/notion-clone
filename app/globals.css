@@ -51,6 +51,75 @@ body {
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  /* Washed Blue */
+  --color-washed-blue-50: var(--washed-blue-50);
+  --color-washed-blue-100: var(--washed-blue-100);
+  --color-washed-blue-200: var(--washed-blue-200);
+  --color-washed-blue-300: var(--washed-blue-300);
+  --color-washed-blue-400: var(--washed-blue-400);
+  --color-washed-blue-500: var(--washed-blue-500);
+  --color-washed-blue-600: var(--washed-blue-600);
+  --color-washed-blue-700: var(--washed-blue-700);
+  --color-washed-blue-800: var(--washed-blue-800);
+  --color-washed-blue-900: var(--washed-blue-900);
+
+  /* Washed Purple */
+  --color-washed-purple-50: var(--washed-purple-50);
+  --color-washed-purple-100: var(--washed-purple-100);
+  --color-washed-purple-200: var(--washed-purple-200);
+  --color-washed-purple-300: var(--washed-purple-300);
+  --color-washed-purple-400: var(--washed-purple-400);
+  --color-washed-purple-500: var(--washed-purple-500);
+  --color-washed-purple-600: var(--washed-purple-600);
+  --color-washed-purple-700: var(--washed-purple-700);
+  --color-washed-purple-800: var(--washed-purple-800);
+  --color-washed-purple-900: var(--washed-purple-900);
+
+  /* Primary Blue */
+  --color-primary-blue-50: var(--primary-blue-50);
+  --color-primary-blue-100: var(--primary-blue-100);
+  --color-primary-blue-200: var(--primary-blue-200);
+  --color-primary-blue-300: var(--primary-blue-300);
+  --color-primary-blue-400: var(--primary-blue-400);
+  --color-primary-blue-500: var(--primary-blue-500);
+  --color-primary-blue-600: var(--primary-blue-600);
+  --color-primary-blue-700: var(--primary-blue-700);
+  --color-primary-blue-800: var(--primary-blue-800);
+  --color-primary-blue-900: var(--primary-blue-900);
+
+  /* Primary Purple */
+  --color-primary-purple-50: var(--primary-purple-50);
+  --color-primary-purple-100: var(--primary-purple-100);
+  --color-primary-purple-200: var(--primary-purple-200);
+  --color-primary-purple-300: var(--primary-purple-300);
+  --color-primary-purple-400: var(--primary-purple-400);
+  --color-primary-purple-500: var(--primary-purple-500);
+  --color-primary-purple-600: var(--primary-purple-600);
+  --color-primary-purple-700: var(--primary-purple-700);
+  --color-primary-purple-800: var(--primary-purple-800);
+  --color-primary-purple-900: var(--primary-purple-900);
+
+  /* Neutrals */
+  --color-neutral-1: var(--neutral-1);
+  --color-neutral-2: var(--neutral-2);
+  --color-neutral-3: var(--neutral-3);
+  --color-neutral-4: var(--neutral-4);
+  --color-neutral-5: var(--neutral-5);
+  --color-neutral-6: var(--neutral-6);
+  --color-neutral-7: var(--neutral-7);
+  --color-neutral-8: var(--neutral-8);
+  --color-neutral-9: var(--neutral-9);
+  --color-neutral-10: var(--neutral-10);
+  --color-neutral-11: var(--neutral-11);
+  --color-neutral-12: var(--neutral-12);
+  --color-neutral-13: var(--neutral-13);
+
+  /* Brand */
+  --color-brand-washedPurple: var(--brand-washedPurple);
+  --color-brand-washedBlue: var(--brand-washedBlue);
+  --color-brand-primaryBlue: var(--brand-primaryBlue);
+  --color-brand-primaryPurple: var(--brand-primaryPurple);
+  --color-brand-dark: var(--brand-dark);
 }
 
 :root {
@@ -87,6 +156,76 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Washed Blue */
+  --washed-blue-50: oklch(0.97 0.02 266);
+  --washed-blue-100: oklch(0.90 0.05 267);
+  --washed-blue-200: oklch(0.85 0.07 268);
+  --washed-blue-300: oklch(0.78 0.11 269);
+  --washed-blue-400: oklch(0.73 0.14 269);
+  --washed-blue-500: oklch(0.66 0.18 270);
+  --washed-blue-600: oklch(0.61 0.17 270);
+  --washed-blue-700: oklch(0.49 0.13 271);
+  --washed-blue-800: oklch(0.40 0.10 272);
+  --washed-blue-900: oklch(0.31 0.08 273);
+
+  /* Washed Purple */
+  --washed-purple-50: oklch(0.98 0.02 300);
+  --washed-purple-100: oklch(0.93 0.04 299);
+  --washed-purple-200: oklch(0.90 0.05 299);
+  --washed-purple-300: oklch(0.86 0.07 298);
+  --washed-purple-400: oklch(0.83 0.08 297);
+  --washed-purple-500: oklch(0.79 0.10 296);
+  --washed-purple-600: oklch(0.73 0.09 296);
+  --washed-purple-700: oklch(0.59 0.07 295);
+  --washed-purple-800: oklch(0.49 0.05 294);
+  --washed-purple-900: oklch(0.40 0.04 293);
+
+  /* Primary Blue */
+  --primary-blue-50: oklch(0.95 0.03 255);
+  --primary-blue-100: oklch(0.86 0.08 255);
+  --primary-blue-200: oklch(0.80 0.12 255);
+  --primary-blue-300: oklch(0.72 0.17 257);
+  --primary-blue-400: oklch(0.67 0.20 259);
+  --primary-blue-500: oklch(0.58 0.26 262);
+  --primary-blue-600: oklch(0.54 0.24 262);
+  --primary-blue-700: oklch(0.43 0.19 263);
+  --primary-blue-800: oklch(0.35 0.15 264);
+  --primary-blue-900: oklch(0.28 0.12 265);
+
+  /* Primary Purple */
+  --primary-purple-50: oklch(0.95 0.04 305);
+  --primary-purple-100: oklch(0.84 0.12 303);
+  --primary-purple-200: oklch(0.78 0.17 301);
+  --primary-purple-300: oklch(0.68 0.25 297);
+  --primary-purple-400: oklch(0.63 0.28 294);
+  --primary-purple-500: oklch(0.51 0.29 288);
+  --primary-purple-600: oklch(0.48 0.27 288);
+  --primary-purple-700: oklch(0.39 0.22 288);
+  --primary-purple-800: oklch(0.32 0.17 288);
+  --primary-purple-900: oklch(0.26 0.13 288);
+
+  /* Neutrals */
+  --neutral-1: oklch(1 0 0);
+  --neutral-2: oklch(0.995 0 0);
+  --neutral-3: oklch(0.972 0 0);
+  --neutral-4: oklch(0.953 0 0);
+  --neutral-5: oklch(0.886 0 0);
+  --neutral-6: oklch(0.804 0 0);
+  --neutral-7: oklch(0.647 0 0);
+  --neutral-8: oklch(0.493 0 0);
+  --neutral-9: oklch(0.429 0 0);
+  --neutral-10: oklch(0.303 0 0);
+  --neutral-11: oklch(0.269 0 0);
+  --neutral-12: oklch(0.223 0 0);
+  --neutral-13: oklch(0.145 0 0);
+
+  /* Brand */
+  --brand-washedPurple: oklch(0.79 0.10 296);
+  --brand-washedBlue: oklch(0.66 0.18 270);
+  --brand-primaryBlue: oklch(0.58 0.26 262);
+  --brand-primaryPurple: oklch(0.51 0.29 288);
+  --brand-dark: oklch(0.145 0 0);
 }
 
 .dark {
@@ -159,11 +298,31 @@ body {
 
 @keyframes slide {
   from {
-    transform: translateX(-1%);
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(-101%);
+    transform: translateX(-100%);
   }
 
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }

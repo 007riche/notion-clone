@@ -4,7 +4,15 @@ import Image from "next/image";
 
 import Banner from "@/public/appBanner.png";
 import Cal from "@/public/cal.png";
-import { CLIENTS } from "@/lib/constants";
+import Diamond from "@/public/icons/diamond.svg";
+import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from "@/lib/constants";
+import { randomUUID } from "crypto";
+import { twMerge } from "tailwind-merge";
+import clsx from "clsx";
+import CustomCard from "@/components/landing-page/custom-card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 function HomePage() {
     // const classes = " overflow-hidden
@@ -19,6 +27,7 @@ function HomePage() {
 
     return (
         <>
+            {/* <div className="bg-brand-primaryBlue h-20 w-20" > Catch me just to debug tailwing shenenigans</div> */}
             <section className=" overflow-hidden
                 px-4 
                 sm:px-6 
@@ -102,8 +111,8 @@ function HomePage() {
                  before:absolute
                 ">
                     {
-                        [...Array(2)].map((arr) => (
-                            <div key={arr}
+                        [...Array(2)].map((arr, index) => (
+                            <div key={index}
                                 className="flex
                         flex-nowrap
                         animate-slide">
@@ -165,6 +174,148 @@ function HomePage() {
                         alt="Calendar"
                         className="border rounded-2xl"
                     />
+                </div>
+            </section>
+            <section className="relative">
+                <div className="w-full
+                        blur-[120px]
+                        rounded-full
+                        h-32
+                        absolute
+                        bg-brand-primaryPurple/50
+                        -z-10
+                        top-56
+                        " >
+                </div>
+                <div className="mt-20
+                    px-4
+                    sm:px-6
+                    flex
+                    flex-col
+                    overflow-x-hidden
+                    overflow-visible
+                    " >
+                    <TitleSection
+                        title="Trusted by all"
+                        subheading="Join thousands of satisfied users who rely on our platform for their personal and professional productivity needs."
+                        pill="Testimonials" />
+                </div>
+                {[...Array(2)].map((arr, index) => (
+                    <div key={randomUUID()}
+
+                        className={cn(
+                            "mt-10 flex flex-nowrap gap-6 self-start hover:paused",
+                            index === 0
+                                ? "animate-[slide-left_60s_linear_infinite]"
+                                : "animate-[slide-right_60s_linear_infinite]"
+                        )}
+                    >
+                        {USERS.map((testimonial, index) =>
+                        (
+                            <CustomCard key={testimonial.name}
+                                className="w-[500px]
+                                shrink-0
+                                rounded-xl
+                                dark:bg-linear-to-t
+                                dark:from-border
+                                dark:to-background"
+
+                                cardHeader={
+                                    <div className="flex
+                                    items-center
+                                    gap-4">
+                                        <Avatar>
+                                            <AvatarImage src={`/avatars/${index + 1}.png`} />
+                                            <AvatarFallback>IMG</AvatarFallback>
+                                        </Avatar>
+                                        <div>
+                                            <CardTitle className="text-foreground">
+                                                {testimonial.name}
+                                            </CardTitle>
+                                            <CardDescription className="dark:text-washed-purple-800">
+                                                {testimonial.name.toLocaleLowerCase()}
+                                            </CardDescription>
+                                        </div>
+                                    </div>
+                                }
+
+                                cardContent={
+                                    <p className="dark:text-washed-purple-800">
+                                        {testimonial.message}
+                                    </p>
+                                }
+
+                            // cardFooter={ }
+                            >
+
+                            </CustomCard>
+                        )
+                        )}
+                    </div>
+                ))}
+            </section>
+            <section className="mt-20 px-4 sm:px-6">
+                <TitleSection
+                    title="The perfect plan for You"
+                    subheading="Experience all the benefits of our platform. Select a plan that
+                 suits your needs and take your productivity to new heights."
+                    pill="Pricing" />
+
+                <div className="flex 
+                    flex-col-reverse 
+                    sm:flex-row 
+                    gap-4 
+                    justify-center 
+                    sm:items-stretch 
+                    items-center 
+                    mt-10">
+                    {PRICING_CARDS.map((card) => (
+                        <CustomCard
+                            key={card.planType}
+                            className={cn(
+                                "w-75 rounded-2xl dark:bg-black/95 backdrop-blur-3xl",
+                                {
+                                    "border border-purple-700/70": card.planType === PRICING_PLANS.proplan,
+                                }
+                            )}
+                            cardHeader={
+                                <CardTitle className="text-2xl 
+                                font-semibold" >
+                                    {
+                                        card.planType === PRICING_PLANS.proplan && (
+                                            <>
+                                                <div className="hidden 
+                                            dark:block
+                                            w-full
+                                            blur-[120px]
+                                            rounded-full
+                                            h-32
+                                            bg-purple-800/80
+                                            -z-10
+                                            top-0
+                                            "></div>
+                                                <Image
+                                                    src={Diamond}
+                                                    alt="Pro Plan Icon"
+                                                    loading="lazy" />
+                                            </>
+                                        )
+                                    }
+                                    {card.planType}
+                                </CardTitle>
+                            }
+                            cardFooter={
+                                <ul className="font-normal
+                                flex
+                                mb-2
+                                flex-col
+                                gap-4">
+                                    <small>{card.highlightFeature}</small>
+                                </ul>
+                            }
+                        >
+                        </CustomCard>
+                    ))}
                 </div>
             </section>
         </>
