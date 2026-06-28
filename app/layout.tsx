@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 // import db from "@/lib/supabase/db";
 // import { log } from "console";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/lib/providers/next-theme-providers";
 
+const dm_sans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Notion clone",
@@ -32,9 +34,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased",
-        geistSans.variable, geistMono.variable,
-        "font-sans", inter.variable)}
+      className={cn("bg-background", "h-full", "antialiased",
+        dm_sans, "font-sans", inter.className)}
       suppressHydrationWarning
     >
       <body className=
